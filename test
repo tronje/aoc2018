@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ ! -f $1/a.out ]; then
+	./build $1
+fi
+
+cd $1
+valgrind ./a.out
